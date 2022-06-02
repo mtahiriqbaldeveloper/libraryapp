@@ -28,3 +28,6 @@
 - delete category http://localhost:8080/api/category/delete-category/{id}
 - get single category http://localhost:8080/api/category/get-category/{id}
 - add category http://localhost:8080/api/category/add-category
+
+i have used Mysql database 
+but i  have also added H2 dependency in the pom.xml file and applicaiton.properities by these are commented if want to use H2 memory database can use it by uncommenting it
