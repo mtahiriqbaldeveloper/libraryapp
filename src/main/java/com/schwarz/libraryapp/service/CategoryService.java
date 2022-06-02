@@ -25,10 +25,9 @@ public class CategoryService {
 
     public List<Category> getAllCategories(){
         List<Category> categories = categoryRepository.findAll();
+        
+        categories.forEach((category)->category.setAssignedBook(bookRepository.findBookByCategoryId(category.getId()).size()));
 
-        for(int i=0;i<categories.size();i++){
-            categories.get(i).setAssignedBook(bookRepository.findBookByCategoryId(categories.get(i).getId()).size());
-        }
         return categories;
     }
 
